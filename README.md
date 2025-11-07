@@ -4,7 +4,7 @@
 
 The purpose of this exercise is to **create an image similar to the example below:**
 
-![example](example.png)
+![example](https://learn.zone01oujda.ma/api/content/root/01-edu_module/content/jart/example.png)
 
 You’ll implement a small graphics library that can draw geometric shapes in Java.
 
@@ -128,9 +128,3 @@ public class Main {
 Learn more about Java AWT here:  
 👉 [java.awt Documentation](https://www.javatpoint.com/java-awt)
 
----
-
-## 🏁 Result
-
-After running your program, you should generate an image similar to the example.  
-Output file: **`image.png`**

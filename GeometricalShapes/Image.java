@@ -1,18 +1,22 @@
 package GeometricalShapes;
 
 public class Image implements Displayable {
-    public Image(int width, int height) {
+    int width, height;
 
+    public Image(int width, int height) {
+        this.width = width;
+        this.height = height;
     }
-    public int getHeight() {
-        return Math.getExponent(Math.random());
-    }
-    public int getWidth() {
-        return Math.getExponent(Math.random());
-    }
+
+    public int getHeight() { return height; }
+    public int getWidth() { return width; }
+
+    @Override
     public void display(int x, int y, Color color) {
 
     }
+
+    @Override
     public void save(String string) {
         
     }

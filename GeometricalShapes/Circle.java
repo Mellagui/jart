@@ -1,7 +1,11 @@
 package GeometricalShapes;
 
 public class Circle {
-    public Circle() {}
+    Color color;
+
+    public Circle() {
+
+    }
 
     public Circle random(int width, int height) {
         return random(width, height);

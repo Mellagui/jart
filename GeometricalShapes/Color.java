@@ -1,14 +1,14 @@
 package GeometricalShapes;
 
 public class Color {
-    public int r;
-    public int g;
-    public int b;
+    public int R;
+    public int G;
+    public int B;
 
     public Color() {
-        this.r = Math.getExponent(Math.random() * 255);
-        this.g = Math.getExponent(Math.random() * 255);
-        this.b = Math.getExponent(Math.random() * 255);
+        this.R = Math.getExponent(Math.random() * 255);
+        this.G = Math.getExponent(Math.random() * 255);
+        this.B = Math.getExponent(Math.random() * 255);
     }
 
     public static Color getColor() {

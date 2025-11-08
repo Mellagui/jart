@@ -3,8 +3,8 @@ package GeometricalShapes;
 import java.awt.Color;
 
 public class Point implements Drawable {
-    int x, y;
-    Color color;
+    private int x, y;
+    private final Color color;
 
     public Point(int x, int y) {
         this.x = x;
@@ -12,10 +12,18 @@ public class Point implements Drawable {
         this.color = getColor();
     }
 
-    public int getX() { return x; }
-    public int getY() { return y; }
-    public void setX(int x) { this.x = x; }
-    public void setY(int y) { this.y = y; }
+    public int getX() {
+        return this.x;
+    }
+    public int getY() {
+        return this.y;
+    }
+    public void setX(int x) {
+        this.x = x;
+    }
+    public void setY(int y) {
+        this.y = y;
+    }
 
     @Override
     public void draw(Displayable displayable) {

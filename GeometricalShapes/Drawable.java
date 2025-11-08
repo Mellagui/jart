@@ -1,7 +1,7 @@
 package GeometricalShapes;
 
-import java.util.Random;
 import java.awt.Color;
+import java.util.Random;
 
 public interface Drawable {
     void draw(Displayable displayable);

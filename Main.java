@@ -25,6 +25,7 @@ public class Main {
         //     Circle circle = Circle.random(image.getWidth(), image.getHeight());
         //     circle.draw(image);
         // }
+        
         image.save("image.png");
     }
 }

@@ -3,7 +3,7 @@ package GeometricalShapes;
 import java.awt.Color;
 
 public class Point implements Drawable {
-    private int x, y;
+    public int x, y;
     private final Color color;
 
     public Point(int x, int y) {

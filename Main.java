@@ -13,8 +13,8 @@ public class Main {
         Point point3 = new Point(500, 600);
         point3.draw(image);
 
-        // Line line = new Line(new Point(50, 50), new Point(300, 300));
-        // line.draw(image);
+        Line line = new Line(new Point(50, 50), new Point(300, 300));
+        line.draw(image);
 
         // Rectangle rectangle = new Rectangle(new Point(50, 50), new Point(300, 200));
         // rectangle.draw(image);

@@ -19,6 +19,12 @@ To get started:
 
 ---
 
+## Run project 
+```bash
+$ javac Main.java GeometricalShapes/*.java -d build
+$ java -cp  build Main
+```
+
 ## 🧱 Required Interfaces
 
 ### 🖍️ `Drawable`

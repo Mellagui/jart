@@ -7,6 +7,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 public class Image implements Displayable {
+
     private final int width, height;
     private final BufferedImage image;
 
@@ -19,13 +20,20 @@ public class Image implements Displayable {
     public int getHeight() {
         return this.height;
     }
+
     public int getWidth() {
         return this.width;
     }
 
     @Override
     public void display(int x, int y, Color color) {
-        this.image.setRGB(x, y, color.getRGB());
+        // int width = image.getWidth();
+        // int height = image.getHeight();
+
+        // Only draw if coordinates are within image bounds
+        if (x >= 0 && x < width && y >= 0 && y < height) {
+            image.setRGB(x, y, color.getRGB());
+        }
     }
 
     @Override

@@ -24,8 +24,8 @@ public class Rectangle implements Drawable {
     public void draw(Displayable displayable) {
         // int x1 = topLeft.getX();
         // int y1 = topLeft.getY();
-        int x2 = bottomRight.getX();
-        int y2 = bottomRight.getY();
+        // int x2 = bottomRight.getX();
+        // int y2 = bottomRight.getY();
 
         Point p1 = new Point(topLeft.getX(), topLeft.getY());
         Point p2 = new Point(bottomRight.getX(), bottomRight.getY());

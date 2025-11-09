@@ -7,7 +7,7 @@ public interface Drawable {
     void draw(Displayable displayable);
 
     default Color getColor() {
-        int rnd = (new Random()).nextInt(256);
-        return new Color(rnd, rnd, rnd);
+        Random random = new Random();
+        return new Color(random.nextInt(256), random.nextInt(256), random.nextInt(256));
     }
 }

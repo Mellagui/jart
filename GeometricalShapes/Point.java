@@ -26,8 +26,8 @@ public class Point implements Drawable {
         this.y = y;
     }
 
-    public static Point random(int width , int height){
-        Random random = new Random();
+    public static Point random(int width , int height) {
+        final Random random = new Random();
         return new Point(random.nextInt(width), random.nextInt(height));
     }
 

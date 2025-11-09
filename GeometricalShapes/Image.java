@@ -27,8 +27,6 @@ public class Image implements Displayable {
 
     @Override
     public void display(int x, int y, Color color) {
-        // int width = image.getWidth();
-        // int height = image.getHeight();
 
         // Only draw if coordinates are within image bounds
         if (x >= 0 && x < width && y >= 0 && y < height) {

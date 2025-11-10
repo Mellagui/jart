@@ -82,54 +82,54 @@ public class Pentagon implements Drawable {
         }
     }
 
-    private void fillPentagon(Displayable displayable, Point[] vertices, int maxWidth, int maxHeight) {
-        int minY = Integer.MAX_VALUE;
-        int maxY = Integer.MIN_VALUE;
+    // private void fillPentagon(Displayable displayable, Point[] vertices, int maxWidth, int maxHeight) {
+    //     int minY = Integer.MAX_VALUE;
+    //     int maxY = Integer.MIN_VALUE;
         
-        for (Point vertex : vertices) {
-            minY = Math.min(minY, vertex.getY());
-            maxY = Math.max(maxY, vertex.getY());
-        }
+    //     for (Point vertex : vertices) {
+    //         minY = Math.min(minY, vertex.getY());
+    //         maxY = Math.max(maxY, vertex.getY());
+    //     }
         
-        minY = Math.max(0, minY);
-        maxY = Math.min(maxHeight - 1, maxY);
+    //     minY = Math.max(0, minY);
+    //     maxY = Math.min(maxHeight - 1, maxY);
         
-        for (int y = minY; y <= maxY; y++) {
-            int[] intersections = new int[5];
-            int count = 0;
+    //     for (int y = minY; y <= maxY; y++) {
+    //         int[] intersections = new int[5];
+    //         int count = 0;
             
-            for (int i = 0; i < 5; i++) {
-                Point p1 = vertices[i];
-                Point p2 = vertices[(i + 1) % 5];
+    //         for (int i = 0; i < 5; i++) {
+    //             Point p1 = vertices[i];
+    //             Point p2 = vertices[(i + 1) % 5];
                 
-                if ((p1.getY() <= y && p2.getY() > y) || (p2.getY() <= y && p1.getY() > y)) {
-                    double t = (y - p1.getY()) / (double) (p2.getY() - p1.getY());
-                    int x = (int) Math.round(p1.getX() + t * (p2.getX() - p1.getX()));
-                    intersections[count++] = x;
-                }
-            }
+    //             if ((p1.getY() <= y && p2.getY() > y) || (p2.getY() <= y && p1.getY() > y)) {
+    //                 double t = (y - p1.getY()) / (double) (p2.getY() - p1.getY());
+    //                 int x = (int) Math.round(p1.getX() + t * (p2.getX() - p1.getX()));
+    //                 intersections[count++] = x;
+    //             }
+    //         }
             
-            for (int i = 0; i < count - 1; i++) {
-                for (int j = i + 1; j < count; j++) {
-                    if (intersections[i] > intersections[j]) {
-                        int temp = intersections[i];
-                        intersections[i] = intersections[j];
-                        intersections[j] = temp;
-                    }
-                }
-            }
+    //         for (int i = 0; i < count - 1; i++) {
+    //             for (int j = i + 1; j < count; j++) {
+    //                 if (intersections[i] > intersections[j]) {
+    //                     int temp = intersections[i];
+    //                     intersections[i] = intersections[j];
+    //                     intersections[j] = temp;
+    //                 }
+    //             }
+    //         }
             
-            for (int i = 0; i < count; i += 2) {
-                if (i + 1 < count) {
-                    for (int x = intersections[i]; x <= intersections[i + 1]; x++) {
-                        if (x >= 0 && x < maxWidth && y >= 0 && y < maxHeight) {
-                            displayable.display(x, y, this.color);
-                        }
-                    }
-                }
-            }
-        }
-    }
+    //         for (int i = 0; i < count; i += 2) {
+    //             if (i + 1 < count) {
+    //                 for (int x = intersections[i]; x <= intersections[i + 1]; x++) {
+    //                     if (x >= 0 && x < maxWidth && y >= 0 && y < maxHeight) {
+    //                         displayable.display(x, y, this.color);
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 
     public static Pentagon random(int maxWidth, int maxHeight) {
         java.util.Random rand = new java.util.Random();

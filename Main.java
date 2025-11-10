@@ -14,16 +14,10 @@ public class Main {
         Point point3 = new Point(500, 600);
         point3.draw(image);
 
-        Square square1 = new Square(new Point(200, 200), 100, 45);
-        square1.draw(image);
-
-        Square square2 = new Square(new Point(500, 200), 80, 0);
-        square2.draw(image);
-
         Pentagon pentagon1 = new Pentagon(new Point(200, 500), 80);
         pentagon1.draw(image);
 
-        Pentagon pentagon2 = new Pentagon(new Point(500, 500), 90, 36);
+        Pentagon pentagon2 = new Pentagon(new Point(500, 500), 90, 50);
         pentagon2.draw(image);
 
         Cube cube1 = new Cube(new Point(750, 200), 100, 30, 45, 0);
@@ -32,10 +26,6 @@ public class Main {
         Cube cube2 = new Cube(new Point(750, 500), 80, 60, 30, 15);
         cube2.draw(image);
 
-        for (int i = 0; i < 5; i++) {
-            Square randomSquare = Square.random(image.getWidth(), image.getHeight());
-            randomSquare.draw(image);
-        }
 
         for (int i = 0; i < 5; i++) {
             Pentagon randomPentagon = Pentagon.random(image.getWidth(), image.getHeight());

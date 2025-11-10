@@ -4,46 +4,41 @@ public class Main {
     public static void main(String[] args) {
         final Image image = new Image(1000, 1000);
 
-        // Draw some points
-        Point point1 = new Point(50, 100);
-        point1.draw(image);
-
-        Point point2 = new Point(300, 400);
-        point2.draw(image);
-
-        Point point3 = new Point(500, 600);
-        point3.draw(image);
-
-        Pentagon pentagon1 = new Pentagon(new Point(200, 500), 80);
-        pentagon1.draw(image);
-
-        Pentagon pentagon2 = new Pentagon(new Point(500, 500), 90, 50);
-        pentagon2.draw(image);
-
-        Cube cube1 = new Cube(new Point(750, 200), 100, 30, 45, 0);
-        cube1.draw(image);
-
-        Cube cube2 = new Cube(new Point(750, 500), 80, 60, 30, 15);
-        cube2.draw(image);
-
+        final Point point = new Point(50, 100);
+        point.draw(image);
 
         for (int i = 0; i < 5; i++) {
-            Pentagon randomPentagon = Pentagon.random(image.getWidth(), image.getHeight());
+            final Point randomPoint = Point.random(image.getWidth(), image.getHeight());
+            randomPoint.draw(image);
+        }
+
+        final Line line = new Line(new Point(50, 50), new Point(300, 300));
+        line.draw(image);
+
+        for (int i = 0; i < 3; i++) {
+            final Line randomLine = Line.random(image.getWidth(), image.getHeight());
+            randomLine.draw(image);
+        }
+
+        final Pentagon pentagon1 = new Pentagon(new Point(200, 500), 80);
+        pentagon1.draw(image);
+
+        for (int i = 0; i < 3; i++) {
+            final Pentagon randomPentagon = Pentagon.random(image.getWidth(), image.getHeight());
             randomPentagon.draw(image);
         }
 
-        for (int i = 0; i < 5; i++) {
-            Cube randomCube = Cube.random(image.getWidth(), image.getHeight());
+        final Cube cube1 = new Cube(new Point(750, 200), 100, 30, 45, 0);
+        cube1.draw(image);
+
+        for (int i = 0; i < 3; i++) {
+            final Cube randomCube = Cube.random(image.getWidth(), image.getHeight());
             randomCube.draw(image);
         }
 
-        // Uncomment these to test other shapes
-        // Line line = new Line(new Point(50, 50), new Point(300, 300));
-        // line.draw(image);
-
-        Rectangle rectangle = new Rectangle(new Point(50, 50), new Point(300, 200));
+        final Rectangle rectangle = new Rectangle(new Point(50, 50), new Point(300, 200));
         rectangle.draw(image);
-        Triangle triangle = new Triangle(new Point(100, 100), new Point(900, 900), new Point(100, 900));
+        final Triangle triangle = new Triangle(new Point(100, 100), new Point(900, 900), new Point(100, 900));
         triangle.draw(image);
 
         for (int i = 0; i < 50; i++) {

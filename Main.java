@@ -14,29 +14,23 @@ public class Main {
         Point point3 = new Point(500, 600);
         point3.draw(image);
 
-        // Draw a square with 45-degree rotation
         Square square1 = new Square(new Point(200, 200), 100, 45);
         square1.draw(image);
 
-        // Draw a square with no rotation
         Square square2 = new Square(new Point(500, 200), 80, 0);
         square2.draw(image);
 
-        // Draw a pentagon pointing upward (default)
         Pentagon pentagon1 = new Pentagon(new Point(200, 500), 80);
         pentagon1.draw(image);
 
-        // Draw a pentagon with 36-degree rotation
         Pentagon pentagon2 = new Pentagon(new Point(500, 500), 90, 36);
         pentagon2.draw(image);
 
-        // Draw random squares with random rotations
         for (int i = 0; i < 10; i++) {
             Square randomSquare = Square.random(image.getWidth(), image.getHeight());
             randomSquare.draw(image);
         }
 
-        // Draw random pentagons with random rotations
         for (int i = 0; i < 10; i++) {
             Pentagon randomPentagon = Pentagon.random(image.getWidth(), image.getHeight());
             randomPentagon.draw(image);

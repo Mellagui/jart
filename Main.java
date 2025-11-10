@@ -26,14 +26,25 @@ public class Main {
         Pentagon pentagon2 = new Pentagon(new Point(500, 500), 90, 36);
         pentagon2.draw(image);
 
-        for (int i = 0; i < 10; i++) {
+        Cube cube1 = new Cube(new Point(750, 200), 100, 30, 45, 0);
+        cube1.draw(image);
+
+        Cube cube2 = new Cube(new Point(750, 500), 80, 60, 30, 15);
+        cube2.draw(image);
+
+        for (int i = 0; i < 5; i++) {
             Square randomSquare = Square.random(image.getWidth(), image.getHeight());
             randomSquare.draw(image);
         }
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
             Pentagon randomPentagon = Pentagon.random(image.getWidth(), image.getHeight());
             randomPentagon.draw(image);
+        }
+
+        for (int i = 0; i < 5; i++) {
+            Cube randomCube = Cube.random(image.getWidth(), image.getHeight());
+            randomCube.draw(image);
         }
 
         // Uncomment these to test other shapes
